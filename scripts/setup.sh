@@ -11,9 +11,26 @@ if [[ -n "$LAVA_API_TOKEN" ]]; then
 else
 	lava-server manage tokens add --user kernelci
 fi
-# By default add a worker on the master
-lava-server manage pipeline-worker --hostname $(hostname)
-# Add a single QEMU device
+# Add workers
+lava-server manage pipeline-worker --hostname lava-slave-01
+lava-server manage pipeline-worker --hostname lava-slave-02
+# Add QEMU devices
 lava-server manage device-types add qemu
-lava-server manage add-device --device-type qemu --worker $(hostname) qemu-01
+lava-server manage add-device --device-type qemu --worker lava-slave-01 qemu-01
 lava-server manage device-dictionary --hostname qemu-01 --import /etc/dispatcher-config/devices/qemu.jinja2
+lava-server manage add-device --device-type qemu --worker lava-slave-01 qemu-02
+lava-server manage device-dictionary --hostname qemu-02 --import /etc/dispatcher-config/devices/qemu.jinja2
+lava-server manage add-device --device-type qemu --worker lava-slave-01 qemu-03
+lava-server manage device-dictionary --hostname qemu-03 --import /etc/dispatcher-config/devices/qemu.jinja2
+lava-server manage add-device --device-type qemu --worker lava-slave-01 qemu-04
+lava-server manage device-dictionary --hostname qemu-04 --import /etc/dispatcher-config/devices/qemu.jinja2
+# Add IoT Devices
+lava-server manage device-types add nrf52-nitrogen
+lava-server manage add-device --device-type nrf52-nitrogen --worker lava-slave-02 nrf52-nitrogen-01
+lava-server manage device-dictionary --hostname nrf52-nitrogen-01 --import /etc/dispatcher-config/devices/nrf52-nitrogen-01.jinja2
+lava-server manage device-types add stm32-carbon
+lava-server manage add-device --device-type stm32-carbon --worker lava-slave-02 stm32-carbon-01
+lava-server manage device-dictionary --hostname stm32-carbon-01.jinja2 --import /etc/dispatcher-config/devices/stm32-carbon-01.jinja2
+lava-server manage device-types add frdm-k64f
+lava-server manage add-device --device-type frdm-k64f --worker lava-slave-02 frdm-k64f-01
+lava-server manage device-dictionary --hostname frdm-k64f-01 --import /etc/dispatcher-config/devices/frdm-k64f-01.jinja2
