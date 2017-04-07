@@ -1,3 +1,5 @@
 {% extends 'nrf52-nitrogen.jinja2' %}
 {% set board_id = '900902210FBC841AF262EBEB' %}
-{% set connection_command = 'telnet 172.17.0.1 2000' %}
+{% set power_on_command = '/root/scripts/power-on-pykush.sh 2' %}
+{% set power_off_command = 'pykush -s YK22916 -d 2' %}
+{% set connection_command = '/root/scripts/connect-to-nrf52-nitrogen-01.sh' %}
