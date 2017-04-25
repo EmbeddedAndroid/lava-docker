@@ -1,5 +1,6 @@
 {% extends 'frdm-k64f.jinja2' %}
 {% set board_id = '02400226e0a34e5c0000000000000000000000001d7ab3e4' %}
-{% set power_on_command = '/root/scripts/power-on-pykush.sh 1' %}
+{% set hard_reset_command = '/root/scripts/reset-port-pykush.sh 1' %}
 {% set power_off_command = 'pykush -s YK22916 -d 1' %}
+{% set power_on_command = 'pykush -s YK22916 -u 1' %}
 {% set connection_command = '/root/scripts/connect-to-frdm-k64f-01.sh' %}
