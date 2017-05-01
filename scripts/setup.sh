@@ -14,10 +14,10 @@ else
 	lava-server manage tokens add --user admin
 fi
 # Add workers
-lava-server manage workers lava-slave-01
-lava-server manage workers lava-slave-02
-lava-server manage workers lava-slave-03
-lava-server manage workers lava-slave-04
+lava-server manage workers add lava-slave-01
+lava-server manage workers add lava-slave-02
+lava-server manage workers add lava-slave-03
+lava-server manage workers add lava-slave-04
 # Add QEMU devices
 lava-server manage device-types add qemu
 lava-server manage devices add --device-type qemu --worker lava-slave-01 qemu-01
