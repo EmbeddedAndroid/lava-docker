@@ -10,6 +10,8 @@ RUN \
   cd /root/lava-server && \
   curl https://github.com/EmbeddedAndroid/lava-server/commit/78fdfa61e55eea4b5c1998a2e597e7ae737ce188.patch | git am && \
   curl https://github.com/EmbeddedAndroid/lava-server/commit/ac6a5878110afa06728c2df9dc85cc2889a71c86.patch | git am && \
+  sed -i 's,git clone https://github.com/Linaro/pkg,git clone https://github.com/EmbeddedAndroid/pkg,g' /root/lava-server/share/debian-dev-build.sh && \ 
+  sed -i 's,dch -v ${VERSION}-1 -D unstable "Local developer build",dch -v ${VERSION}-1 -b -D unstable "Local developer build",g' /root/lava-server/share/debian-dev-build.sh && \
   /root/lava-server/share/debian-dev-build.sh -p lava-server && \
   /stop.sh
 

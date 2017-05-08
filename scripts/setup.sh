@@ -32,6 +32,14 @@ lava-server manage device-dictionary --hostname qemu-04 --import /etc/dispatcher
 lava-server manage device-types add nrf52-nitrogen
 lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-02 nrf52-nitrogen-01
 lava-server manage device-dictionary --hostname nrf52-nitrogen-01 --import /etc/dispatcher-config/devices/nrf52-nitrogen-01.jinja2
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-02 nrf52-nitrogen-02
+lava-server manage device-dictionary --hostname nrf52-nitrogen-02 --import /etc/dispatcher-config/devices/nrf52-nitrogen-02.jinja2
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-04 nrf52-nitrogen-03
+lava-server manage device-dictionary --hostname nrf52-nitrogen-03 --import /etc/dispatcher-config/devices/nrf52-nitrogen-03.jinja2
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-04 nrf52-nitrogen-04
+lava-server manage device-dictionary --hostname nrf52-nitrogen-04 --import /etc/dispatcher-config/devices/nrf52-nitrogen-04.jinja2
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-04 nrf52-nitrogen-05
+lava-server manage device-dictionary --hostname nrf52-nitrogen-05 --import /etc/dispatcher-config/devices/nrf52-nitrogen-05.jinja2
 lava-server manage device-types add stm32-carbon
 lava-server manage devices add --device-type stm32-carbon --worker lava-slave-02 stm32-carbon-01
 lava-server manage device-dictionary --hostname stm32-carbon-01.jinja2 --import /etc/dispatcher-config/devices/stm32-carbon-01.jinja2
