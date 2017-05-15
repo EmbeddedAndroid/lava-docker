@@ -1,0 +1,17 @@
+{% extends 'hi6220-hikey.jinja2' %}
+{% set fastboot_serial_number = '0123456789abcdef' %}
+{% set adb_serial_number = '0123456789abcdef' %}
+{% set connection_command = 'telnet 127.0.0.1 2018' %}
+{% set hard_reset_command = '/root/scripts/reset-port-pdu05.sh 4' %}
+{% set power_on_command = '/root/scripts/pdu05.exp 1 4' %}
+{% set power_off_command = '/root/scripts/pdu05.exp 0 4' %}
+{% set pre_power_command = '/root/scripts/reset-port-pykush.sh YK23414 1' %}
+{% set pre_os_command = '/root/scripts/power-off-pykush-port.sh YK23414 1' %}
+{% set soft_reset_command = 'fastboot -u -s 0123456789abcdef' %}
+{% set adb_command = 'adb -s 0123456789abcdef' %}
+{% set fastboot_options = ['-u', '-S', '256M'] %}
+{% set fastboot_command = 'fastboot -u -s 0123456789abcdef' %}
+{% set device_info = [{'board_id': '0123456789abcdef'}] %}
+{% set interrupt_prompt = 'Android Fastboot mode' %}
+{% set interrupt_string = "' '" %}
+{% set exclusive = 'True' %}

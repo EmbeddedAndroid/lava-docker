@@ -40,13 +40,26 @@ lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-
 lava-server manage device-dictionary --hostname nrf52-nitrogen-04 --import /etc/dispatcher-config/devices/nrf52-nitrogen-04.jinja2
 lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-04 nrf52-nitrogen-05
 lava-server manage device-dictionary --hostname nrf52-nitrogen-05 --import /etc/dispatcher-config/devices/nrf52-nitrogen-05.jinja2
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-04 nrf52-nitrogen-06
+lava-server manage device-dictionary --hostname nrf52-nitrogen-06 --import /etc/dispatcher-config/devices/nrf52-nitrogen-06.jinja2
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-04 nrf52-nitrogen-07
+lava-server manage device-dictionary --hostname nrf52-nitrogen-07 --import /etc/dispatcher-config/devices/nrf52-nitrogen-07.jinja2
 lava-server manage device-types add stm32-carbon
 lava-server manage devices add --device-type stm32-carbon --worker lava-slave-02 stm32-carbon-01
 lava-server manage device-dictionary --hostname stm32-carbon-01.jinja2 --import /etc/dispatcher-config/devices/stm32-carbon-01.jinja2
 lava-server manage device-types add frdm-k64f
 lava-server manage devices add --device-type frdm-k64f --worker lava-slave-02 frdm-k64f-01
 lava-server manage device-dictionary --hostname frdm-k64f-01 --import /etc/dispatcher-config/devices/frdm-k64f-01.jinja2
+lava-server manage devices add --device-type frdm-k64f --worker lava-slave-04 frdm-k64f-02
+lava-server manage device-dictionary --hostname frdm-k64f-02 --import /etc/dispatcher-config/devices/frdm-k64f-02.jinja2
 # Add U-Boot Devices
 lava-server manage device-types add imx7d-sbc-iot-imx7
 lava-server manage devices add --device-type imx7d-sbc-iot-imx7 --worker lava-slave-03 imx7d-sbc-iot-imx7-01
 lava-server manage device-dictionary --hostname imx7d-sbc-iot-imx7-01 --import /etc/dispatcher-config/devices/imx7d-sbc-iot-imx7-01.jinja2
+lava-server manage device-types add imx6q-cm-fx6
+lava-server manage devices add --device-type imx6q-cm-fx6 --worker lava-slave-03 imx6q-cm-fx6-01
+lava-server manage device-dictionary --hostname imx6q-cm-fx6-01 --import /etc/dispatcher-config/devices/imx6q-cm-fx6-01.jinja2
+# Add Fastboot Devices
+lava-server manage device-types add hi6220-hikey
+lava-server manage devices add --device-type hi6220-hikey --worker lava-slave-01 hi6220-hikey-01
+lava-server manage device-dictionary --hostname hi6220-hikey-01 --import /etc/dispatcher-config/devices/hi6220-hikey-01.jinja2

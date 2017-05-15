@@ -1,0 +1,6 @@
+{% extends 'imx6q-cm-fx6.jinja2' %}
+{% set connection_command = 'telnet 192.168.1.21 2023' %}
+{% set exclusive = 'True' %}
+{% set hard_reset_command = '/root/scripts/reset-port-pdu05.sh 8' %}
+{% set power_off_command = '/root/scripts/pdu05.exp 0 8' %}
+{% set power_on_command = '/root/scripts/pdu05.exp 1 8' %}

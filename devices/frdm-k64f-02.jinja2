@@ -1,0 +1,7 @@
+{% extends 'frdm-k64f.jinja2' %}
+{% set board_id = '0240020132AC4E7BCF52B3C3' %}
+{% set exclusive = 'True' %}
+{% set hard_reset_command = '/root/scripts/reset-port-pykush.sh YK23301 2' %}
+{% set power_off_command = '/root/scripts/power-off-pykush-port.sh YK23301 2' %}
+{% set power_on_command = '/root/scripts/power-off-pykush-port.sh YK23301 2' %}
+{% set connection_command = 'telnet 127.0.0.1 3004' %}
