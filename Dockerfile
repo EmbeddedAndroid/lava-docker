@@ -10,16 +10,22 @@ COPY scripts/setup.sh .
 
 RUN \
   /start.sh && \
-  cd /root/lava-server && \
-  curl https://github.com/EmbeddedAndroid/lava-server/commit/c411b86db01c2cd4664b130077cfb0e1d7ba28b3.patch | git am && \
-  curl https://github.com/EmbeddedAndroid/lava-server/commit/dbdd2b5ae5f46a34336108344c430cc78d31949c.patch | git am && \
-  curl https://github.com/EmbeddedAndroid/lava-server/commit/8fbd32eeaaa149a669cfbb4be63792557d7ded8c.patch | git am && \
+  cd /root && \
+  rm -rf lava-server && \
+  git clone https://github.com/EmbeddedAndroid/lava-server.git -b release && \
+  cd lava-server && \
+  echo "cd \${DIR} && dpkg -i *.deb" >> /root/lava-server/share/debian-dev-build.sh && \
   sed -i 's,git clone https://github.com/Linaro/pkg,git clone https://github.com/EmbeddedAndroid/pkg,g' /root/lava-server/share/debian-dev-build.sh && \ 
   /root/lava-server/share/debian-dev-build.sh -p lava-server && \
+  cd /root && \
+  rm -rf lava-dispatcher && \
+  git clone https://github.com/EmbeddedAndroid/lava-dispatcher.git -b release && \
+  cd lava-dispatcher && \
+  /root/lava-server/share/debian-dev-build.sh -p lava-dispatcher && \
   /stop.sh
 
 COPY configs/lava-slave-03.yaml /etc/lava-server/dispatcher.d/
 
-EXPOSE 69/udp 80 5555 5556
+EXPOSE 69/udp 80 3079 5555 5556
 
 CMD /start.sh && /setup.sh && bash
