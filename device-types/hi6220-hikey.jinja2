@@ -10,17 +10,27 @@ flash_cmds_order: ['ptable', 'fastboot', 'nvme', 'boot', 'cache', 'system', 'use
 actions:
   deploy:
     methods:
+      lxc:
       fastboot:
+      ssh:
+        identity_file: device/dynamic_vm_keys/lava
     connections:
+      lxc:
       serial:
+      ssh:
   boot:
     connections:
+      lxc:
       serial:
+      ssh:
     methods:
       fastboot:
         - boot
+        - wait-usb-add
+        - lxc-add-device
         - auto-login
         - shell-session
+        - export-env
       uefi-menu:
         parameters:
           interrupt_prompt: {{ interrupt_prompt|default("The default boot selection will start in") }}
@@ -36,5 +46,6 @@ actions:
         - select:
             items:
              - {{ fastboot_select_item|default('boot from eMMC') }}
+      ssh:
 
 {% endblock %} {# end body block #}
