@@ -54,7 +54,7 @@ lava-server manage devices add --device-type frdm-k64f --worker lava-slave-04 fr
 lava-server manage device-dictionary --hostname frdm-k64f-02 --import /etc/dispatcher-config/devices/frdm-k64f-02.jinja2
 # Add U-Boot Devices
 lava-server manage device-types add imx7d-sbc-iot-imx7
-lava-server manage devices add --device-type imx7d-sbc-iot-imx7 --worker lava-slave-03 imx7d-sbc-iot-imx7-01
+lava-server manage devices add --device-type imx7d-sbc-iot-imx7 --worker lava-slave-01 imx7d-sbc-iot-imx7-01
 lava-server manage device-dictionary --hostname imx7d-sbc-iot-imx7-01 --import /etc/dispatcher-config/devices/imx7d-sbc-iot-imx7-01.jinja2
 lava-server manage device-types add imx6q-cm-fx6
 lava-server manage devices add --device-type imx6q-cm-fx6 --worker lava-slave-03 imx6q-cm-fx6-01
