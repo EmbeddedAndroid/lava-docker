@@ -4,7 +4,7 @@ FROM kernelci/lava-docker:2017.05
 COPY devices/* /etc/dispatcher-config/devices/
 
 # Add device-type configuration
-COPY device-types/* /etc/dispatcher-config/device-types/
+COPY device-types/* /etc/lava-server/dispatcher-config/device-types/
 
 COPY scripts/setup.sh .
 
@@ -25,7 +25,7 @@ RUN \
   /root/lava-server/share/debian-dev-build.sh -p lava-dispatcher && \
   /stop.sh
 
-COPY configs/lava-slave-03.yaml /etc/lava-server/dispatcher.d/
+COPY configs/slave/* /etc/lava-server/dispatcher.d/
 
 EXPOSE 69/udp 80 3079 5555 5556
 
