@@ -1,0 +1,7 @@
+{% extends 'nrf52-nitrogen.jinja2' %}
+{% set board_id = '9009022109BEF733F46098C2' %}
+{% set exclusive = 'True' %}
+{% set hard_reset_command = '/root/scripts/reset-port-pykush.sh YK23407 2' %}
+{% set power_off_command = '/root/scripts/power-off-pykush-port.sh YK23407 2' %}
+{% set power_on_command = '/root/scripts/power-off-pykush-port.sh YK23407 2' %}
+{% set connection_command = 'telnet 127.0.0.1 2023' %}
