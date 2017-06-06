@@ -30,39 +30,39 @@ lava-server manage devices add --device-type qemu --worker lava-slave-01 qemu-04
 lava-server manage device-dictionary --hostname qemu-04 --import /etc/dispatcher-config/devices/qemu.jinja2
 # Add IoT Devices
 lava-server manage device-types add nrf52-nitrogen
-lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-02 nrf52-nitrogen-01
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-02 nrf52-nitrogen-01 --tags fota zephyr
 lava-server manage device-dictionary --hostname nrf52-nitrogen-01 --import /etc/dispatcher-config/devices/nrf52-nitrogen-01.jinja2
-lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-02 nrf52-nitrogen-02
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-02 nrf52-nitrogen-02 --tags fota zephyr
 lava-server manage device-dictionary --hostname nrf52-nitrogen-02 --import /etc/dispatcher-config/devices/nrf52-nitrogen-02.jinja2
-lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-04 nrf52-nitrogen-03
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-04 nrf52-nitrogen-03 --tags zephyr
 lava-server manage device-dictionary --hostname nrf52-nitrogen-03 --import /etc/dispatcher-config/devices/nrf52-nitrogen-03.jinja2
-lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-04 nrf52-nitrogen-04
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-04 nrf52-nitrogen-04 --tags zephyr
 lava-server manage device-dictionary --hostname nrf52-nitrogen-04 --import /etc/dispatcher-config/devices/nrf52-nitrogen-04.jinja2
-lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-04 nrf52-nitrogen-05
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-04 nrf52-nitrogen-05 --tags zephyr
 lava-server manage device-dictionary --hostname nrf52-nitrogen-05 --import /etc/dispatcher-config/devices/nrf52-nitrogen-05.jinja2
-lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-04 nrf52-nitrogen-06
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-04 nrf52-nitrogen-06 --tags zephyr
 lava-server manage device-dictionary --hostname nrf52-nitrogen-06 --import /etc/dispatcher-config/devices/nrf52-nitrogen-06.jinja2
-lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-04 nrf52-nitrogen-07
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-04 nrf52-nitrogen-07 --tags zephyr
 lava-server manage device-dictionary --hostname nrf52-nitrogen-07 --import /etc/dispatcher-config/devices/nrf52-nitrogen-07.jinja2
-lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-03 nrf52-nitrogen-08
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-03 nrf52-nitrogen-08 --tags e2e zephyr
 lava-server manage device-dictionary --hostname nrf52-nitrogen-08 --import /etc/dispatcher-config/devices/nrf52-nitrogen-08.jinja2
-lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-03 nrf52-nitrogen-09
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-03 nrf52-nitrogen-09 --tags e2e zephyr
 lava-server manage device-dictionary --hostname nrf52-nitrogen-09 --import /etc/dispatcher-config/devices/nrf52-nitrogen-09.jinja2
-lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-03 nrf52-nitrogen-10
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-03 nrf52-nitrogen-10 --tags e2e zephyr
 lava-server manage device-dictionary --hostname nrf52-nitrogen-10 --import /etc/dispatcher-config/devices/nrf52-nitrogen-10.jinja2
-lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-03 nrf52-nitrogen-11
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-03 nrf52-nitrogen-11 --tags e2e zephyr
 lava-server manage device-dictionary --hostname nrf52-nitrogen-11 --import /etc/dispatcher-config/devices/nrf52-nitrogen-11.jinja2
-lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-03 nrf52-nitrogen-12
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-03 nrf52-nitrogen-12 --tags e2e zephyr
 lava-server manage device-dictionary --hostname nrf52-nitrogen-12 --import /etc/dispatcher-config/devices/nrf52-nitrogen-12.jinja2
-lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-03 nrf52-nitrogen-13
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-03 nrf52-nitrogen-13 --tags e2e zephyr
 lava-server manage device-dictionary --hostname nrf52-nitrogen-13 --import /etc/dispatcher-config/devices/nrf52-nitrogen-13.jinja2
 lava-server manage device-types add stm32-carbon
 lava-server manage devices add --device-type stm32-carbon --worker lava-slave-02 stm32-carbon-01
 lava-server manage device-dictionary --hostname stm32-carbon-01.jinja2 --import /etc/dispatcher-config/devices/stm32-carbon-01.jinja2
 lava-server manage device-types add frdm-k64f
-lava-server manage devices add --device-type frdm-k64f --worker lava-slave-02 frdm-k64f-01
+lava-server manage devices add --device-type frdm-k64f --worker lava-slave-02 frdm-k64f-01 --tags fota zephyr
 lava-server manage device-dictionary --hostname frdm-k64f-01 --import /etc/dispatcher-config/devices/frdm-k64f-01.jinja2
-lava-server manage devices add --device-type frdm-k64f --worker lava-slave-04 frdm-k64f-02
+lava-server manage devices add --device-type frdm-k64f --worker lava-slave-04 frdm-k64f-02 --tags zephyr
 lava-server manage device-dictionary --hostname frdm-k64f-02 --import /etc/dispatcher-config/devices/frdm-k64f-02.jinja2
 # Add U-Boot Devices
 lava-server manage device-types add imx7d-sbc-iot-imx7
