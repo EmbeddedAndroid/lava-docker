@@ -56,6 +56,12 @@ lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-
 lava-server manage device-dictionary --hostname nrf52-nitrogen-12 --import /etc/dispatcher-config/devices/nrf52-nitrogen-12.jinja2
 lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-03 nrf52-nitrogen-13 --tags e2e zephyr
 lava-server manage device-dictionary --hostname nrf52-nitrogen-13 --import /etc/dispatcher-config/devices/nrf52-nitrogen-13.jinja2
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-02 nrf52-nitrogen-14 --tags e2e zephyr
+lava-server manage device-dictionary --hostname nrf52-nitrogen-14 --import /etc/dispatcher-config/devices/nrf52-nitrogen-14.jinja2
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-02 nrf52-nitrogen-15 --tags e2e zephyr
+lava-server manage device-dictionary --hostname nrf52-nitrogen-15 --import /etc/dispatcher-config/devices/nrf52-nitrogen-15.jinja2
+lava-server manage devices add --device-type nrf52-nitrogen --worker lava-slave-02 nrf52-nitrogen-16 --tags e2e zephyr
+lava-server manage device-dictionary --hostname nrf52-nitrogen-16 --import /etc/dispatcher-config/devices/nrf52-nitrogen-16.jinja2
 lava-server manage device-types add stm32-carbon
 lava-server manage devices add --device-type stm32-carbon --worker lava-slave-02 stm32-carbon-01
 lava-server manage device-dictionary --hostname stm32-carbon-01.jinja2 --import /etc/dispatcher-config/devices/stm32-carbon-01.jinja2
