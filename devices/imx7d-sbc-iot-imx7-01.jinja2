@@ -1,7 +1,7 @@
 {% extends 'imx7d-sbc-iot-imx7.jinja2' %}
 {% set connection_command = 'telnet 127.0.0.01 2017' %}
 {% set exclusive = 'True' %}
-{% set hard_reset_command = '/root/scripts/reset-port-pdu05.sh 7' %}
+{% set hard_reset_command = '/root/scripts/reset-port-pdu05.sh 7 180' %}
 {% set power_off_command = '/root/scripts/pdu05.exp 0 7' %}
 {% set power_on_command = '/root/scripts/pdu05.exp 1 7' %}
 {% set emmc_uuid = 'mmc-SEM04G_0xa2aa2993' %}
